@@ -1,14 +1,28 @@
 # Database config example
-default:
+default-dev:
   user: !expr keyring::key_list(service = "cmpdb")[1,2]
   password: !expr keyring::key_get(service = "cmpdb", username = keyring::key_list("cmpdb")[1, 2])
   host: !expr keyring::key_get(service = "cmpdb", username = "ip")
   port: !expr as.numeric(keyring::key_get(service = "cmpdb", username = "port"))
-  dbname: "cmp_dev"
+  dbname: "INSERT DEV DATABASE NAME"
 
-admin:
+admin-dev:
   user: !expr keyring::key_list(service = "cmpdb")[1,2]
   password: !expr keyring::key_get(service = "cmpdb", username = keyring::key_list("cmpdb")[1, 2])
   host: !expr keyring::key_get(service = "cmpdb", username = "ip")
   port: !expr as.numeric(keyring::key_get(service = "cmpdb", username = "port"))
-  dbname: "cmp_dev"
+  dbname: "INSERT DEV DATABASE NAME"
+
+default-prod:
+  user: !expr keyring::key_list(service = "cmpdb")[1,2]
+  password: !expr keyring::key_get(service = "cmpdb", username = keyring::key_list("cmpdb")[1, 2])
+  host: !expr keyring::key_get(service = "cmpdb", username = "ip")
+  port: !expr as.numeric(keyring::key_get(service = "cmpdb", username = "port"))
+  dbname: "INSERT PROD DATABASE NAME"
+
+admin-prod:
+  user: !expr keyring::key_list(service = "cmpdb")[1,2]
+  password: !expr keyring::key_get(service = "cmpdb", username = keyring::key_list("cmpdb")[1, 2])
+  host: !expr keyring::key_get(service = "cmpdb", username = "ip")
+  port: !expr as.numeric(keyring::key_get(service = "cmpdb", username = "port"))
+  dbname: "INSERT PROD DATABASE NAME"
