@@ -55,6 +55,8 @@ rsconnect/
 # data files
 *csv
 *xlsx
+*csv.gz
+*nc.gz
 
 # Config files
 **/config.yml
