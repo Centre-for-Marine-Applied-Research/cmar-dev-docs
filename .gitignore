@@ -20,6 +20,7 @@
 
 # RStudio files
 .Rproj.user/
+.Rproj
 
 # produced vignettes
 vignettes/*.html
@@ -54,7 +55,18 @@ rsconnect/
 # data files
 *csv
 *xlsx
+*csv.gz
+*nc.gz
 
 # Config files
 **/config.yml
 
+# VSCode files
+.vscode/
+.venv/
+
+# Python env (uv) files
+.python-version
+pyproject.toml
+uv.lock
+src/
