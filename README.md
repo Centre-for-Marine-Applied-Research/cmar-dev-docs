@@ -6,6 +6,7 @@ This repository acts as a centralized hub for documentation and best practices f
 
 ## Repository Structure
 
+```bash
 cmar-dev-docs/
 ├── setup/
 │   └── keyring_credentials/
@@ -15,3 +16,4 @@ cmar-dev-docs/
 │   └── git/
 │
 └── README.md
+```
